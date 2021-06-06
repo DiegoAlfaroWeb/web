@@ -1,0 +1,715 @@
+html{
+    font-size: 62.5%;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    font-size: 16px;
+     /*Propiedad: Valor*/
+     font-family:'Montserrat', sans-serif;;
+     font-weight: 700;
+     margin: 0;
+}
+/*El codigo del body y del html nos permite que 1rem sea:
+1rem  = a 10px*/
+
+/*Propiedades personalizadas --Nombre: Valor;*/
+:root{
+    --blanco: #fff;
+    --dark: #212121;
+    --jeje:#00d4ff;
+    --TamañoParrafo: 1.6rem;
+    --TamañoTxtBotonHover: 2.5rem;
+    --TamañoTxtBoton: 2.0rem;
+    --PesoBoton: bold;
+    --FamiliaTitulos: 'Bebas Neue', cursive;
+    --MyBg:linear-gradient(90deg, #00d4ff 53%, rgba(0, 162, 211,.3) 47%);
+}
+
+
+
+/*Estilos reutilizables*/
+ .Titulo1 {
+    text-align: center;
+    font-size: 7.5rem;
+    font-weight: 900;
+    color: var(--dark);
+    font-family: var(--FamiliaTitulos);
+}
+h2, h3 .Titulo {
+    text-align: center;
+    font-size: 5rem;
+    font-family: var(--FamiliaTitulos);
+}
+h3.Titulo {
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--FamiliaTitulos);
+    font-weight: lighter;
+}
+h2 .hiper {
+    font-size: 4rem;
+    color: var(--jeje);
+    font-family: var(--FamiliaTitulos);
+    text-align: center;
+}
+.Btn{
+    background:var(--jeje);
+    padding: 1.5rem 5rem;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem 0rem ;
+    border: none;
+}
+.Btn:hover{
+    background:none;
+    padding: 1.8rem 4.5rem;
+    font-size: 1.7rem;
+    color: var(--jeje);
+    border: .2rem solid;
+    border-color: var(--jeje);
+}
+.Sombra {
+    -webkit-box-shadow: 0px 14px 88px -9px rgba(0,162,211,0.51);
+    -moz-box-shadow: 0px 14px 88px -9px rgba(0,162,211,0.651);
+    box-shadow: 0px 14px 88px -9px rgba(0,162,211,0.51);
+    
+    
+} 
+
+
+
+/*Estilos unicos*/
+    #Inicio h2.Titulo{
+        font-size: 3rem;
+        margin-top: 5rem;
+    }
+
+
+    .Menu a {
+
+        margin: 0rem;
+        padding: 1rem;
+        text-align: center;
+        text-decoration: none;
+        color: aliceblue;
+        font-size: var(--TamañoTxtBoton);
+        font-weight: lighter;
+        font-family: var(--FamiliaTitulos);
+    }
+    
+    
+
+    @media (min-width: 1140px) {
+        
+    .Menu a {
+
+        color: #FFFFFF;
+        font-size: var(--TamañoTxtBoton);
+        font-weight: var(--PesoBoton);
+        font-family: var(--FamiliaTitulos);
+        font-weight: lighter;
+        text-decoration: none;
+        padding: 1rem 6rem;
+        margin: 0rem;
+        text-align: center;
+    }
+
+    }
+
+
+ .Menu >a:hover {
+        /*Utilizando propiedades personalizadas propiedad: var (--Nombre)*/
+    color: #fff;
+    background: var(--MyBg);
+    font-size: var(--TamañoTxtBotonHover);
+    font-weight: var(--PesoBoton);
+    font-family: var(--FamiliaTitulos);
+    font-weight: lighter;
+    text-decoration: none;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 7rem;
+    margin: .1rem;
+}
+.Menu {
+    margin: auto 5rem 0rem 5rem;
+    background-color: var(--dark);  
+    padding: 0rem;
+    /*Display flex nos permite ustilizar flexbox y la dirección en columna nos acomoda los elemntos de arriba  a abajo*/
+    display: flex;
+    flex-direction: column;
+    max-width: 120rem;
+}
+#Inicio {
+    text-align: center;
+}
+.Contenedor {
+    width: 90%;
+    height: 45rem;
+    background-image: url(../IMG/Hero\ 2.jpeg) ;
+    background-repeat:no-repeat ;
+    background-size: cover;
+    background-position-y:0rem ;
+    /*background-color: #ccc;*/
+    margin: 0rem auto 0rem auto;
+    padding: 1rem 1rem;
+    color: aliceblue;
+    position: relative;
+
+}
+.Contenedor .Btn{
+    margin-bottom: 5rem;
+}
+
+.Filter{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0,255,248,.5) 23%, rgba(148,233,181,.1) 57%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.NavBg{
+    background-color: var(--dark);
+    margin: 0rem;
+}
+
+
+
+.Servicios svg {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+}
+
+.Servicios {
+    text-align: center;
+
+}
+#Servicios section{
+    padding: 2.5rem;
+    margin: 0rem 4rem;
+    border-radius: 2rem;
+}
+#Servicios section:hover{
+    
+    -webkit-box-shadow: 0px 14px 88px -9px rgba(0,162,211,0.71);
+    -moz-box-shadow: 0px 14px 88px -9px rgba(0,162,211,0.71);
+    box-shadow: 0px 14px 88px -9px rgba(0,162,211,0.71);
+    
+}
+
+.Footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.Footer svg{
+    padding: 1rem;
+}
+footer {
+    text-align: center;
+}
+
+#Contacto{
+    background-image: url(../IMG/Online\ protection_Monochromatic.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: 70%;
+    position: relative;
+    height: 70rem;
+    margin: 7rem 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.F2{
+    position: absolute;
+    background-image: linear-gradient(to top, #ffffff 0%, #cccccc10 100%);
+    height: 100%;
+    width: 100%;
+}
+.Cont{
+    position: absolute;
+    background-image: linear-gradient(to top, #ffffff 0%, #cccccc10 100%);
+    border-radius: 5rem;
+    padding: 2.5rem;
+    z-index: 99;
+    height: 50rem;
+    margin:2.5rem;
+
+
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+fieldset input{
+    margin-bottom: 2rem;
+   
+}
+
+@media (min-width: 750px) {
+    .Cont{
+        margin:0rem 5rem;
+        padding: 7rem;
+    }
+
+}
+
+
+
+
+
+
+
+.ContenidoHero{
+    position: absolute;
+    background:rgba(255, 250, 250, 0.8);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Hero{
+    position: relative;
+    height: 190rem;
+    background:url(../IMG/Architect_Monochromatic.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: -15%;
+}
+@media (min-width: 748px) {
+    .Hero{
+        height:150rem;
+    }
+}
+
+
+
+.Hero2{
+    position: relative;
+    height: 50rem;
+    background:url(../IMG/Artifical\ inteligence_Monochromatic.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: -15%;
+    
+}
+.ContenidoHero2{
+    position: absolute;
+    background:rgba(255, 250, 250, 0.9);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.Left{
+    text-align: center;
+    padding: 0rem 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Left h2{
+    margin-top: 5rem;
+}
+
+
+
+/*Adaptabilidad Responsive con media queries (@media)*/
+
+@media (min-width: 480px){
+
+    }
+
+@media (min-width: 768px){
+  
+    
+}
+
+@media (min-width: 1140px) {
+
+    .NavBg{
+        position: sticky; 
+        top: -.1rem;
+        z-index: 999;
+        background:#000;
+    }
+    .Menu {  
+        flex-direction: row;
+        padding: 1.5rem;
+        margin: 0rem 20rem;
+        justify-content: space-between;
+       
+    }
+    .Contenedor {
+        width: 100%;
+        background-color: #ccc;
+        margin: 0rem 0rem;
+        padding: 1rem 0rem;
+        height: 50rem;
+        background-position-y:-35rem ;
+    }
+    .Servicios{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+    #Servicios section{
+        padding: 4rem 2.5rem;
+        margin: 0rem 2rem;
+        border-radius: 2rem;
+        width: 25%;
+    }
+
+    
+    .Hero{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70rem;
+    }
+
+
+    .Titulo1 {
+        font-size: 8.5rem;
+
+    }
+    h2, h3 .Titulo {
+        text-align: center;
+        font-size: 5.5rem;
+    }
+    h2 .hiper {
+        font-size: 7rem;
+    }
+
+
+    .Hero, .Hero2 {
+
+        width: 100%;
+    }
+    footer {
+        width:100%;
+        }
+
+
+
+
+
+            
+        .Hero2{
+            position: relative;
+            height: 70rem;
+            background:url(../IMG/Artifical\ inteligence_Monochromatic.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-x: -15%;
+        }
+        .ContenidoHero2{
+            position: absolute;
+            background:rgba(255, 250, 250, 0.5);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row-reverse;
+        }
+        .Left{
+            text-align: right;
+            padding: 0rem 10rem 0rem 75rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .Left h2{
+            text-align: right;
+        }
+        .Left .Btn{
+            margin: 1rem 0rem 0rem 39rem ;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+        #Contacto{
+            margin: 0rem;
+            background-image: url(../IMG/Online\ protection_Monochromatic.svg);
+            background-repeat: no-repeat;
+            background-size: 70rem;
+            background-position-y: 50%;
+            background-position-x: 90%;
+            position: relative;
+            height: 75rem;
+            
+        }
+
+}
+@media (min-width: 1400px) {
+    .Hero, .Hero2{
+
+        height: 100rem;
+ 
+    }
+ 
+}
+
+
+
+
+
+.Container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+@media (min-width: 1140px) {
+    .Container{
+        flex-direction: row;
+    }
+}
+.Beneficio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0rem 2.5rem;
+    padding: 7.5rem 4rem;
+    border-radius: 2rem;
+}
+.Beneficio:hover{
+    -webkit-box-shadow: -2px 14px 41px 0px rgba(0,0,0,0.44);
+-moz-box-shadow: -2px 14px 41px 0px rgba(0,0,0,0.44);
+box-shadow: -2px 14px 41px 0px rgba(0,0,0,0.44);
+background: #fff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #fff, #000);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #00a2d3, #00a2d390); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: #fff;
+}
+.Nosotros h2{
+    margin: 5rem 0rem 0rem 0rem;
+}
+.Beneficio .Icono{
+    height: 8rem;
+    width: 8rem;
+    background: var(--jeje);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Beneficio p{
+    margin: 0rem;
+}
+.Beneficio h3{
+    margin: 2rem 0rem 1rem  0rem;
+}
+.Nosotros{
+    margin-bottom: 5rem;
+
+}
+
+
+
+
+.Formulario{
+  
+}
+
+.Cont .Titulo{
+    margin-bottom: 0rem;
+}
+
+.Formulario fieldset{
+    border:none;
+}
+.Formulario fieldset legend{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.6rem;
+    color: var(--jeje);
+    margin-bottom: 2rem;
+    margin-top: 0rem;
+}
+.ContenedorCampos{
+    display: flex;
+    flex-direction: column;
+}
+
+.ContenedorCampos div label{
+    font-weight: bold;
+}
+.MyInput{
+    background:#cccccc10;
+    border-radius: 2rem;
+    width: 100%;
+    height: 2.5rem;
+    border: solid;
+    border-width: .1rem;
+    border-color: #00a2d330;
+}
+
+
+
+
+
+.ContenedorWP{
+    position: sticky; 
+    z-index: 99999;
+    bottom: 1.5rem;
+    margin-left: 70%;
+}
+@media (min-width: 740px) {
+    .ContenedorWP{
+    bottom: 1.5rem;
+    margin-left: 85%;
+}
+}
+
+
+.ContenedorWP .Icono{
+
+    height: 8rem;
+    width: 8rem;
+    background: var(--jeje);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    margin-bottom: 2rem;
+}
+
+ /*Elementos importantes para aplicar en otros proyectos
+ 
+
+ //El siguiente codigo permite eliminar el modelo de caja de css para que si se define un ancho o alto el padding u otros elementos no lo alteren y se mantenga fijo el tamaño determinado
+
+ html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+ 
+
+ 
+ */
+
+
+
+ 
+
+
+
+
+
+/*
+Así funciona css:
+Selector {
+    Propiedad: Valor
+}
+*/
+
+
+/*Especificidad css
+El css no toma el último valor, toma el valor más especifico
+Si los valores son igual de especificos toma el último
+Si alguno tiene la bandera !important ese será prioritario a todos
+p.parrafo{
+color:blue;
+}
+p{
+color:red;
+}
+
+Muestra el color azul por ser más especifico
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Estilos no aprendidos en el curso*/
+::selection {
+    background: var(--jeje);
+    color: #fff;
+}
+
+/* width */
+ ::-webkit-scrollbar {
+     width: 12px;
+     background-color: #1E1E1E
+ }
+ /* Track */
+ ::-webkit-scrollbar-track {
+     box-shadow: inset 0 0 5px #0F0F0F; 
+     border-radius: 45px;
+ }
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+     background: linear-gradient(#40EAE9, var(--jeje));
+     border-radius: 45px;
+ }
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+     background:var(--jeje);
+ }
+
